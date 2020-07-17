@@ -62,12 +62,12 @@ function App() {
   useEffect(() => {
     checkLoggedIn();
   }, []);
-
+  debugger;
   return state.isLoggedIn ? (
     <Screens />
   ) : (
     <>
-      <Title>Quick Notes</Title>
+      <Title>Quick Notes 1 {process.env.REACT_APP_FOO} {process.env.NODE_ENV} </Title>
       <Authenticator
         onStateChange={authState => {
           if (authState === "signedIn") {
